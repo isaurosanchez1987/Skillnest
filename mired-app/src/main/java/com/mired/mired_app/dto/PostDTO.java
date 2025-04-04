@@ -12,7 +12,15 @@ public class PostDTO {
     @NotBlank
     private String description;
 
-    // Getters y setters
+    public PostDTO(String title, String category, String description) {
+        this.title = title;
+        this.category = category;
+        this.description = description;
+    }
+
+    public PostDTO() {
+
+    }
 
 
     public @NotBlank String getTitle() {
