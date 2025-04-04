@@ -115,4 +115,10 @@ public class AuthController {
         postService.create(postDTO, usuario);
         return "redirect:/home";
     }
+
+    @PostMapping("/post/delete/{id}")
+    public String eliminarPost(@PathVariable Long id) {
+        postService.delete(id);
+        return "redirect:/home";
+    }
 }
